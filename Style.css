@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+body {
+    background: url(img.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    box-shadow: rgba(0,0,0,0.1) 0 0 10px;
+    background-color: #fff;
+  
+}
+.logo {
+    font-size: 45px;
+}
+ul {
+    list-style: none;
+    display: flex;
+}
+ul li {
+    margin: 0 10px;
+}
+a {
+    text-decoration: none;
+    color:#000;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.5s;
+    border-radius: 6px;
+}
+a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 1037px) {
+    body {
+        position: relative;
+    }
+
+    ul {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: -1500px;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        transition: 0.5s;
+        backdrop-filter: blur(10px);
+        
+    }
+    ul li {
+        margin: 20px 0;
+    }
+    ul li a{
+
+        text-transform: uppercase;
+
+    }
+    ul li a:hover{
+        color: #fff;
+
+    }
+    .button{
+        z-index: 100;
+        width: 50px;
+        height: 50px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .button::after{
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 2px;
+        background-color: #000;
+        transform: translateY(-10px);
+        box-shadow: 0 10px 0 #000 ;
+        transition: 0.5s;
+    }
+    .button.active::after{
+        transform: rotate(45deg);
+        box-shadow: 0 0 0 #000 ;
+    }
+    .button::before{
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 2px;
+        background-color: #000;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+    .button.active::before{
+        transform: rotate(-45deg);
+    }
+    ul.active {
+        left :0 ;
+    }
+   
+
+    
+}

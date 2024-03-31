@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            Logo
+        </div>
+        <div class="button"></div>
+        <ul class="menu">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Produits</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+    </header>
+    <main>
+        
+    </main>
+    <script>
+        //Javascript responsive code
+        var button = document.querySelector('.button');
+        var menu = document.querySelector('.menu');
+
+        button.onclick = function() {
+            button.classList.toggle('active');
+            menu.classList.toggle('active');
+       }
+
+    </script>
+    
+</body>
+</html>
